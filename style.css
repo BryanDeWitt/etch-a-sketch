@@ -32,4 +32,16 @@ button{
     width: 50%;
     justify-content: space-evenly;
     align-items: center;
+    cursor: pointer;
 }
+
+input[type="color"] {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: none;
+    border: 0;
+    cursor: pointer;
+  }
+
+

@@ -2,7 +2,8 @@ const container = document.querySelector('#container');
 const button = document.querySelector('#size');
 const grid =  document.querySelector('#grid');
 const restart = document.querySelector('#restart');
-
+const colorPick = document.querySelector('#color');
+let color = colorPick.value;
 create(16)
 
 button.addEventListener('click', () =>{
@@ -29,7 +30,7 @@ function create(n){
         let div = document.createElement('div');
         div.id = 'gridi'
         div.addEventListener('mouseover', () => {
-            div.style.backgroundColor = 'red';
+            div.style.backgroundColor = `${color}`;
         })
         container.appendChild(div)
     }
@@ -56,5 +57,9 @@ restart.addEventListener('click', () =>{
     div.forEach(div =>{
         div.style.backgroundColor = 'white'
     })
+})
+
+colorPick.addEventListener('input', e =>{
+    color = e.target.value;
 })
 
